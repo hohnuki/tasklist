@@ -47,4 +47,10 @@ public class HomeController {
         dao.add(item);
         return "redirect:/list";
     }
+
+    @GetMapping
+    String deleteItem(@RequestParam("id") String id) {
+        dao.delete(id);
+        return "redirect:/list";
+    }
 }
